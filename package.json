@@ -34,9 +34,9 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook-debug": "start-storybook -p 9009 -s public --no-dll",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public",
+    "storybook-debug": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 9009 -s public --no-dll",
+    "storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 9009 -s public",
+    "build-storybook": "SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook -s public",
     "jest:integration": "jest -c integration/jest.config.js",
     "test:integration": "start-server-and-test storybook http-get://localhost:9009 jest:integration"
   },
